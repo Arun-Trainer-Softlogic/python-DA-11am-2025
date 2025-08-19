@@ -1,0 +1,95 @@
+what is Data ?? 
+
+collection of infomation 
+
+
+what are the Types of data ?
+
+
+1. stuctured data
+2. unStructured data 
+3. Nominal data  
+4. ordinal data- -  feedback  
+
+
+Qualitative -- labled-catagories and  
+Quantitative  -- numbers -amounts  -range 
+
+
+Data Science --
+
+
+statistics 
+
+data analysis 
+
+Machine learning --- 
+
+deep Learning --- 
+
+
+scientific computing -- 
+
+
+
+
+data processing stages 
+
+
+1.. Collection of data  -- manual - methords - 
+
+suvey -questionare
+
+inteviews 
+observation - watching cx behaviour in super market-
+
+
+
+
+01 
+
+
+10 
+
+
+001
+110
+
+
+
+a
+
+
+
+5 w 2H 
+
+what 
+when 
+which 
+where 
+who 
+
+how 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
