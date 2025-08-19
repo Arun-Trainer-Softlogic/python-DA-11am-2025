@@ -63,15 +63,15 @@ a
 
 5 w 2H 
 
-what 
-when 
-which 
-where 
-who 
-
-how 
 
 
+who  
+what  
+where  
+when  
+why 
+
+How 
 
 
 
