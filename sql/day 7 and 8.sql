@@ -77,10 +77,10 @@
 -- (employee_id, first_name, last_name, job_title, salary, department_id, hire_date)
 -- values (113, "ron", "teile", "interns", 8000,null,'2023-01-01');
 
- select e.first_name, e.last_name, d.department_name
-from employees e 
-inner join departments d 
-on e.department_id = d.department_id
+--  select e.first_name, e.last_name, d.department_name
+-- from employees e 
+-- inner join departments d 
+-- on e.department_id = d.department_id
 
 -- select e.first_name, e.last_name, d.department_name
 -- from employees e 
