@@ -58,21 +58,21 @@
 -- DELIMITER ;
 -- call getEmployeesbyDept(88)
 
-select * from employees
-DELIMITER //
-CREATE PROCEDURE CountEmployeesByDept(IN deptId INT, OUT empCount INT)
-BEGIN
-   SELECT COUNT(*) INTO empCount
-   FROM employees
-   WHERE department_id = deptId;
-END //
-DELIMITER ;
+-- select * from employees
+-- DELIMITER //
+-- CREATE PROCEDURE CountEmployeesByDept(IN deptId INT, OUT empCount INT)
+-- BEGIN
+--    SELECT COUNT(*) INTO empCount
+--    FROM employees
+--    WHERE department_id = deptId;
+-- END //
+-- DELIMITER ;
 
 
--- calling the PROCEDURE   
-set @total = 0 ;
-call CountEmployeesByDept(2, @total);
-select  @total AS total_emp_in_dept2;
+-- -- calling the PROCEDURE   
+-- set @total = 0 ;
+-- call CountEmployeesByDept(2, @total);
+-- select  @total AS total_emp_in_dept2;
 
 
 
