@@ -39,7 +39,9 @@
 -- END //
 -- DELIMITER ;
 
--- -- Function
+-- Function
+
+
 -- DELIMITER //
 -- CREATE FUNCTION years_of_service(hire_date DATE) RETURNS INT
 -- DETERMINISTIC
@@ -57,6 +59,8 @@
 -- END //
 -- DELIMITER ;
 -- call getEmployeesbyDept(88)
+
+
 
 -- select * from employees
 -- DELIMITER //
@@ -76,6 +80,78 @@
 
 
 
+-- use company;
+-- select * from employees;
 
 
 
+
+-- DELIMITER //
+-- CREATE FUNCTION years_of_service(hire_date DATE) RETURNS INT
+-- DETERMINISTIC
+-- BEGIN
+-- RETURN TIMESTAMPDIFF(YEAR, hire_date, CURDATE());
+-- END //
+-- DELIMITER ;
+
+-- SELECT first_name, years_of_service(hire_date) AS service_years
+-- FROM employees;
+
+
+
+-- select first_name , salary, hire_date,
+-- AVG (salary) over (order by hire_date rows between 2 
+-- preceding and current row) 
+
+-- AS moving_average_salary
+-- from employees;
+
+-- select*from employees;
+
+
+-- select first_name , avg(salary) AS AVG_salary 
+-- from employees
+-- group by first_name;
+
+
+
+
+
+-- select first_name , salary, hire_date,
+-- avg (salary )over(
+-- order by hire_date 
+-- rows between 2 preceding and current row ) As moving_avg_salary
+-- from employees
+-- where employee_id between 101 and 104
+-- order by hire_date;
+
+
+
+-- use company;
+
+
+
+
+-- select * from employees;
+
+-- SELECT employee_id, first_name, salary, hire_date,
+-- 	SUM(salary) OVER (ORDER BY hire_date, employee_id) AS running_total_salary
+-- FROM employees;
+-- AVG()
+
+
+-- select e1.employee_id, e1.first_name, e1.salary, e1.hire_date,
+-- (
+-- select sum(e2.salary)
+-- from employees e2 
+-- where e2.hire_date < e1.hire_date
+-- or (e2.hire_date = e1.hire_date AND 
+-- e2.employee_id <= e1.employee_id)
+-- )AS running_total_salary
+-- from employees e1 
+-- order by e1.hire_date, e1.employee_id
+
+-- SELECT department_id, employee_id, first_name, salary, hire_date,
+--        SUM(salary) OVER (PARTITION BY department_id ORDER BY hire_date, employee_id) AS running_total_salary
+-- FROM employees
+-- ORDER BY department_id, hire_date, employee_id;
